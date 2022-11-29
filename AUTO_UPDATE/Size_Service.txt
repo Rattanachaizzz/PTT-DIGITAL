@@ -1,0 +1,58 @@
+Size_Service
+LavenderDispenser   2.37 MB 
+LavenderMonitor     1.78 MB
+LavenderTankgauge   1.88 MB 
+LavenderConfig	    55.0 MB
+LavenderAPI         144.4 MB   
+LavenderGaia
+
+
+
+
+LavenderDispenser :  F181F01B121B9E955DDA6F1C234D363E 
+windown : Get-FileHash D:\PTT_Digital\Projects\AUTO_UPDATE\AUTO_UPDATE\bin\Debug\LavenderDispenser\MD5\LavenderDispenser.tar.gz -Algorithm MD5
+linux   : md5sum LavenderDispenser.tar.gz
+
+LavenderTankgauge : 6936AD53CC56FE5BDAFDED0BA07A1F82
+Get-FileHash D:\PTT_Digital\Projects\AUTO_UPDATE\AUTO_UPDATE\bin\Debug\LavenderTankgauge\MD5\LavenderTankgauge.zip -Algorithm MD5
+linux   : md5sum LavenderTankgauge.tar.gz
+
+LavenderMonitor : 6606290F38D43ABA5BA1C2914612AFD6
+windown : Get-FileHash D:\PTT_Digital\Projects\AUTO_UPDATE\AUTO_UPDATE\bin\Debug\LavenderMonitor\MD5\LavenderMonitor.tar.gz -Algorithm MD5
+linux   : md5sum LavenderMonitor.tar.gz
+
+LavenderConfig : 0da41851fe40ba87a3eebf1d04e91555
+windown : Get-FileHash D:\PTT_Digital\Projects\AUTO_UPDATE\AUTO_UPDATE\bin\Debug\LavenderConfig\MD5\LavenderConfig.tar.gz -Algorithm MD5   
+linux   : md5sum LavenderConfig.tar.gz
+          split -b 20M LavenderConfig.tar.gz "LavenderConfig.tar.gz.part"
+          cat LavenderConfig.tar.gz.parta* > LavenderConfig.tar.gz
+
+Support : f506895657db779e0718666901ff0bef
+windown : Get-FileHash D:\PTT_Digital\Projects\AUTO_UPDATE\AUTO_UPDATE\bin\Debug\LavenderSupport\MD5\LavenderSupport.tar.gz -Algorithm MD5   
+linux   : md5sum LavenderSupport.tar.gz
+          split -b 20M LavenderSupport.tar.gz "LavenderSupport.tar.gz.part"
+          cat LavenderSupport.tar.gz.parta* > LavenderSupport.tar.gz
+ 
+LavenderAPI   : 6542512BB26720120E7246941B8EE3A4 
+windown : Get-FileHash D:\PTT_Digital\Projects\AUTO_UPDATE\AUTO_UPDATE\bin\Debug\LavenderAPI\MD5\LavenderAPI.tar.gz -Algorithm MD5
+linux   : md5sum LavenderAPI.tar.gz
+          split -b 20M LavenderAPI.tar.gz "LavenderAPI.tar.gz.part"
+          cat LavenderAPI.tar.gz.parta* > LavenderAPI.tar.gz
+
+LavenderGaia
+Get-FileHash D:\PTT_Digital\Projects\AUTO_UPDATE\AUTO_UPDATE\bin\Debug\LavenderGaia\MD5\LavenderGaia.zip -Algorithm MD5
+
+
+
+
+
+scp D:\PTT_Digital\Projects\AUTO_UPDATE\AUTO_UPDATE\bin\Debug\LavenderConfig\MD5\LavenderConfig.zip lavender@10.195.2.64:/home/lavender
+scp lavender@10.195.2.64:/home/lavender/LavenderConfig.zip.parta* D:\PTT_Digital\Projects\AUTO_UPDATE\AUTO_UPDATE\bin\Debug\LavenderConfig\File_Transfer\
+
+scp D:\PTT_Digital\Projects\AUTO_UPDATE\AUTO_UPDATE\bin\Debug\LavenderAPI\MD5\LavenderAPI.zip lavender@10.195.2.64:/home/lavender
+scp lavender@10.195.2.64:/home/lavender/LavenderAPI.zip.parta* D:\PTT_Digital\Projects\AUTO_UPDATE\AUTO_UPDATE\bin\Debug\LavenderAPI\File_Transfer\
+
+
+Line_Notify
+ - My_self       : CkZQSE4uG27BeEtbw0sIjRTDrPwECM9W9Zdu2nud7SX
+ - Super_Support : 0FXVmWTALncaj474rRv2r5X3pa6AZKYHEe2oVhOPiIs

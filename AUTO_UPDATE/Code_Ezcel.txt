@@ -1,0 +1,11 @@
+Sub LinkCheckBoxes()
+Dim chk As CheckBox
+Dim lCol As Long
+lCol = 0 'number of columns to the right of checkbox
+For Each chk In ActiveSheet.CheckBoxes
+   With chk
+      .LinkedCell = _
+         .TopLeftCell.Offset(1, lCol).Address
+   End With
+Next chk
+End Sub

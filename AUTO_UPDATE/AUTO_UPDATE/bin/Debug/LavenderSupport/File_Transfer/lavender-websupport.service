@@ -1,0 +1,12 @@
+[Unit]
+Description=lavender-websupport Main Service
+After=postgresql.service
+[Service]
+WorkingDirectory=/var/www/LavenderSupport
+ExecStart=/usr/bin/dotnet /var/www/LavenderSupport/LavenderSupport.dll
+StandardOutput=syslog
+StandardError=syslog
+Environment=ASPNETCORE_ENVIRONMENT=Development
+Environment=ASPNETCORE_URLS=http://localhost:5004
+[Install]
+WantedBy=multi-user.target
