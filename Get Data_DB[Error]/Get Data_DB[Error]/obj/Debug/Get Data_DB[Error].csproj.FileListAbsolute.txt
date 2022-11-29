@@ -1,0 +1,22 @@
+C:\Users\Aof\Desktop\Get Data_DB[Error]\Get Data_DB[Error]\bin\Debug\Get Data_DB[Error].exe
+C:\Users\Aof\Desktop\Get Data_DB[Error]\Get Data_DB[Error]\bin\Debug\Get Data_DB[Error].pdb
+C:\Users\Aof\Desktop\Get Data_DB[Error]\Get Data_DB[Error]\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Aof\Desktop\Get Data_DB[Error]\Get Data_DB[Error]\bin\Debug\Renci.SshNet.dll
+C:\Users\Aof\Desktop\Get Data_DB[Error]\Get Data_DB[Error]\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Aof\Desktop\Get Data_DB[Error]\Get Data_DB[Error]\bin\Debug\Renci.SshNet.xml
+C:\Users\Aof\Desktop\Get Data_DB[Error]\Get Data_DB[Error]\obj\Debug\Get Data_DB[Error].csproj.AssemblyReference.cache
+C:\Users\Aof\Desktop\Get Data_DB[Error]\Get Data_DB[Error]\obj\Debug\Get Data_DB[Error].csproj.CoreCompileInputs.cache
+C:\Users\Aof\Desktop\Get Data_DB[Error]\Get Data_DB[Error]\obj\Debug\Get Data_DB[Error].csproj.CopyComplete
+C:\Users\Aof\Desktop\Get Data_DB[Error]\Get Data_DB[Error]\obj\Debug\Get Data_DB[Error].exe
+C:\Users\Aof\Desktop\Get Data_DB[Error]\Get Data_DB[Error]\obj\Debug\Get Data_DB[Error].pdb
+D:\PTT_Digital\Projects\Get Data_DB[Error]\Get Data_DB[Error]\bin\Debug\Get Data_DB[Error].exe
+D:\PTT_Digital\Projects\Get Data_DB[Error]\Get Data_DB[Error]\bin\Debug\Get Data_DB[Error].pdb
+D:\PTT_Digital\Projects\Get Data_DB[Error]\Get Data_DB[Error]\bin\Debug\Newtonsoft.Json.dll
+D:\PTT_Digital\Projects\Get Data_DB[Error]\Get Data_DB[Error]\bin\Debug\Renci.SshNet.dll
+D:\PTT_Digital\Projects\Get Data_DB[Error]\Get Data_DB[Error]\bin\Debug\Newtonsoft.Json.xml
+D:\PTT_Digital\Projects\Get Data_DB[Error]\Get Data_DB[Error]\bin\Debug\Renci.SshNet.xml
+D:\PTT_Digital\Projects\Get Data_DB[Error]\Get Data_DB[Error]\obj\Debug\Get Data_DB[Error].csproj.AssemblyReference.cache
+D:\PTT_Digital\Projects\Get Data_DB[Error]\Get Data_DB[Error]\obj\Debug\Get Data_DB[Error].csproj.CoreCompileInputs.cache
+D:\PTT_Digital\Projects\Get Data_DB[Error]\Get Data_DB[Error]\obj\Debug\Get Data_DB[Error].csproj.CopyComplete
+D:\PTT_Digital\Projects\Get Data_DB[Error]\Get Data_DB[Error]\obj\Debug\Get Data_DB[Error].exe
+D:\PTT_Digital\Projects\Get Data_DB[Error]\Get Data_DB[Error]\obj\Debug\Get Data_DB[Error].pdb

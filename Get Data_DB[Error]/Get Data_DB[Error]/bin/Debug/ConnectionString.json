@@ -1,0 +1,10 @@
+{
+  "ConnectionStrings": {
+    "IP_ADDRESS": "192.168.0.201",
+	"Disk": "E"
+  }
+}
+//"LAV_KEY": "Update" || ""Rollback",
+//"LAV_SEVICE": "Dispenser" || "Tankgauge" || "Monitor" || "WebConfig" || "API",|| "Websupport",
+//"IP_ADDRESS": "10.195.2.64"
+//"IP_ADDRESS": "192.168.0.201"
