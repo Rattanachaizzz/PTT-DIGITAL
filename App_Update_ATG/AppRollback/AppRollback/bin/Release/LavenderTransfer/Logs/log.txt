@@ -1,0 +1,8 @@
+Program AppRollback
+9/23/2022 12:39:58 PM : Program is Process Start
+9/23/2022 12:39:58 PM : Program Status >>> Rollback Success.
+9/23/2022 12:39:58 PM : Program is Process End
+Program AppRollback
+9/23/2022 4:29:08 PM : Program is Process Start
+9/23/2022 4:29:08 PM : Program Status >>> Rollback Success.
+9/23/2022 4:29:08 PM : Program is Process End

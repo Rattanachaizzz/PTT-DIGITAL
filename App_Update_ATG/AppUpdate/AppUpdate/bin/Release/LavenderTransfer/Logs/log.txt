@@ -1,0 +1,45 @@
+Program AppUpdate
+9/23/2022 11:28:06 AM : Program is Process Start
+9/23/2022 11:28:06 AM : Program Status >>> Upload Success.
+9/23/2022 11:28:06 AM : Program Status >>> Update Success.
+9/23/2022 11:28:06 AM : Program is Process End
+Program AppUpdate
+9/23/2022 11:48:28 AM : Program is Process Start
+9/23/2022 11:48:28 AM : Program Status >>> Upload Success.
+9/23/2022 11:48:28 AM : Program Status >>> Update Success.
+9/23/2022 11:48:28 AM : Program is Process End
+Program AppUpdate
+9/23/2022 11:59:12 AM : Program is Process Start
+9/23/2022 11:59:12 AM : Program Status >>> Upload Success.
+9/23/2022 11:59:12 AM : Program Status >>> Update Success.
+9/23/2022 11:59:12 AM : Program is Process End
+Program AppUpdate
+9/23/2022 12:01:03 PM : Program is Process Start
+9/23/2022 12:01:03 PM : Program Status >>> Upload Success.
+9/23/2022 12:01:03 PM : Program Status >>> Update Success.
+9/23/2022 12:01:03 PM : Program is Process End
+Program AppUpdate
+9/23/2022 12:27:57 PM : Program is Process Start
+9/23/2022 12:27:57 PM : Program Status >>> Upload/Update Unsuccess.
+9/23/2022 12:27:57 PM : Program is Process End
+Program AppUpdate
+9/23/2022 12:33:37 PM : Program is Process Start
+9/23/2022 12:33:37 PM : Program Status >>> Upload Success.
+9/23/2022 12:33:37 PM : Program Status >>> Update Success.
+9/23/2022 12:33:37 PM : Program is Process End
+Program AppUpdate
+9/23/2022 4:20:19 PM : Program is Process Start
+9/23/2022 4:20:19 PM : Program Status >>> Upload Success.
+Program AppUpdate
+9/23/2022 4:21:55 PM : Program is Process Start
+9/23/2022 4:21:55 PM : Program Status >>> Upload Success.
+Program AppUpdate
+9/23/2022 4:23:06 PM : Program is Process Start
+9/23/2022 4:23:06 PM : Program Status >>> Upload Success.
+9/23/2022 4:23:06 PM : Program Status >>> Update Success.
+9/23/2022 4:23:06 PM : Program is Process End
+Program AppUpdate
+9/23/2022 4:27:49 PM : Program is Process Start
+9/23/2022 4:27:49 PM : Program Status >>> Upload Success.
+9/23/2022 4:27:49 PM : Program Status >>> Update Success.
+9/23/2022 4:27:49 PM : Program is Process End

@@ -1,0 +1,11 @@
+D:\PTT_Digital\Projects\App_Update_ATG\AppUpdate\AppUpdate\bin\Release\AppUpdate.exe
+D:\PTT_Digital\Projects\App_Update_ATG\AppUpdate\AppUpdate\bin\Release\AppUpdate.pdb
+D:\PTT_Digital\Projects\App_Update_ATG\AppUpdate\AppUpdate\bin\Release\Renci.SshNet.dll
+D:\PTT_Digital\Projects\App_Update_ATG\AppUpdate\AppUpdate\bin\Release\Renci.SshNet.xml
+D:\PTT_Digital\Projects\App_Update_ATG\AppUpdate\AppUpdate\obj\Release\AppUpdate.csproj.AssemblyReference.cache
+D:\PTT_Digital\Projects\App_Update_ATG\AppUpdate\AppUpdate\obj\Release\AppUpdate.csproj.CoreCompileInputs.cache
+D:\PTT_Digital\Projects\App_Update_ATG\AppUpdate\AppUpdate\obj\Release\AppUpdate.csproj.CopyComplete
+D:\PTT_Digital\Projects\App_Update_ATG\AppUpdate\AppUpdate\obj\Release\AppUpdate.exe
+D:\PTT_Digital\Projects\App_Update_ATG\AppUpdate\AppUpdate\obj\Release\AppUpdate.pdb
+D:\PTT_Digital\Projects\App_Update_ATG\AppUpdate\AppUpdate\bin\Release\Newtonsoft.Json.dll
+D:\PTT_Digital\Projects\App_Update_ATG\AppUpdate\AppUpdate\bin\Release\Newtonsoft.Json.xml
