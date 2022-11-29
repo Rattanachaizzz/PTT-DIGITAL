@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "noEmitOnError": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "target": "es5"
+  },
+  "exclude": [
+    "node_modules",
+    "wwwroot"
+  ],
+  "ConnectionStrings": {
+    //"ConnectionString": "Data Source=10.195.2.109;Initial Catalog=ENABLERDB;Persist Security Info=True;User ID=sa;Password=pTT!CT01"
+    "ConnectionString": "Data Source=10.92.40.2;Initial Catalog=ENABLERDB;Persist Security Info=True;User ID=sa;Password=pTT!CT01"
+  }
+  //10.92.2.98
+  //10.195.2.109
+}
