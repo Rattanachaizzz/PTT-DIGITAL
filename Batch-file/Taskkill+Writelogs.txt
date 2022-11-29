@@ -1,0 +1,9 @@
+@echo 
+cd C:\PI-THUNDER
+taskkill /f /im ThunderHelper.exe /im ThunderServer.exe
+if not errorlevel 1 ( echo %time% %date% : Taskkill ThunderHelper and ThunderServer Not Success >> C:\Logs_taskkill.txt ) else (
+ echo %time% %date% : Taskkill ThunderHelper and ThunderServer Success >> C:\Logs_taskkill.txt 
+)
+
+
+#if "%ERRORLEVEL%"=="0"(echo 'Process  is running') else (echo 'Process  is not running')
