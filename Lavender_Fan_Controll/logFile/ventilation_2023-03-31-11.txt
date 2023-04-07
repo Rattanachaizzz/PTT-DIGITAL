@@ -1,0 +1,4 @@
+11:59:04:927 {"temperaturenow":27}
+11:59:09:931 {"temperaturenow":27}
+11:59:14:934 {"temperaturenow":27}
+11:59:19:937 {"temperaturenow":27}

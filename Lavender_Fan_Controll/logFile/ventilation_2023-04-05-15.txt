@@ -1,0 +1,13 @@
+15:42:30:581 {"temperaturenow":27}
+15:42:35:584 {"temperaturenow":27}
+15:42:40:586 {"temperaturenow":27}
+15:42:45:589 {"temperaturenow":27}
+15:42:50:591 {"temperaturenow":27}
+15:43:19:950 {"temperaturenow":27}
+15:43:24:953 {"temperaturenow":27}
+15:43:29:956 {"temperaturenow":27}
+15:43:34:958 {"temperaturenow":27}
+15:43:39:967 {"temperaturenow":27}
+15:43:44:969 {"temperaturenow":27}
+15:43:49:972 {"temperaturenow":27}
+15:43:54:976 {"temperaturenow":27}

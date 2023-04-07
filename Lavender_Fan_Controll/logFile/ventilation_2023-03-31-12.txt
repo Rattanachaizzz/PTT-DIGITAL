@@ -1,0 +1,19 @@
+12:01:14:362 {"temperaturenow":27}
+12:01:14:683 
+12:01:15:364 {"temperatureon1":28,"temperatureon2":31,"temperaturenow":27,"Fan":"LOW","interval":5,"temperature_pwm_low":12,"temperature_pwm_high":100}
+12:01:19:367 {"temperaturenow":27}
+12:01:24:371 {"temperaturenow":27}
+12:01:29:386 {"temperaturenow":27}
+12:01:34:388 {"temperaturenow":27}
+12:01:39:392 {"temperaturenow":27}
+12:01:44:402 {"temperaturenow":27}
+12:01:49:406 {"temperaturenow":27}
+12:01:54:409 {"temperaturenow":27}
+12:01:59:412 {"temperaturenow":27}
+12:02:04:414 {"temperaturenow":27}
+12:02:09:417 {"temperaturenow":27}
+12:02:14:419 {"temperaturenow":27}
+12:02:19:422 {"temperaturenow":27}
+12:02:24:425 {"temperaturenow":27}
+12:02:29:427 {"temperaturenow":27}
+12:02:34:430 {"temperaturenow":27}
