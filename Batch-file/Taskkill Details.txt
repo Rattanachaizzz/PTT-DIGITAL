@@ -1,3 +1,0 @@
-Taskkill Details
-kill >>> ThunderHelper.exe
-kill >>> ThunderServer.exe  
