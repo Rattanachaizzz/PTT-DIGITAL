@@ -1,0 +1,10 @@
+ [
+  {
+   
+    "uid": "app1",
+    "append": true,
+    "watch": true,
+    "script": "server.js",
+    "sourceDir": "D:/work/Lavender_p/service_api/Getrealtimevalue"
+  }
+]
