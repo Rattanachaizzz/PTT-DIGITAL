@@ -1,0 +1,11 @@
+C:\Users\Aof\Desktop\Update-DispenserV1106_APIV300\Update-DispenserV1106_APIV300\bin\Debug\Update-DispenserV1106_APIV300.exe
+C:\Users\Aof\Desktop\Update-DispenserV1106_APIV300\Update-DispenserV1106_APIV300\bin\Debug\Update-DispenserV1106_APIV300.pdb
+C:\Users\Aof\Desktop\Update-DispenserV1106_APIV300\Update-DispenserV1106_APIV300\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Aof\Desktop\Update-DispenserV1106_APIV300\Update-DispenserV1106_APIV300\bin\Debug\Renci.SshNet.dll
+C:\Users\Aof\Desktop\Update-DispenserV1106_APIV300\Update-DispenserV1106_APIV300\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Aof\Desktop\Update-DispenserV1106_APIV300\Update-DispenserV1106_APIV300\bin\Debug\Renci.SshNet.xml
+C:\Users\Aof\Desktop\Update-DispenserV1106_APIV300\Update-DispenserV1106_APIV300\obj\Debug\Update-DispenserV1106_APIV300.csproj.AssemblyReference.cache
+C:\Users\Aof\Desktop\Update-DispenserV1106_APIV300\Update-DispenserV1106_APIV300\obj\Debug\Update-DispenserV1106_APIV300.csproj.CoreCompileInputs.cache
+C:\Users\Aof\Desktop\Update-DispenserV1106_APIV300\Update-DispenserV1106_APIV300\obj\Debug\Update-DispenserV1106_APIV300.csproj.CopyComplete
+C:\Users\Aof\Desktop\Update-DispenserV1106_APIV300\Update-DispenserV1106_APIV300\obj\Debug\Update-DispenserV1106_APIV300.exe
+C:\Users\Aof\Desktop\Update-DispenserV1106_APIV300\Update-DispenserV1106_APIV300\obj\Debug\Update-DispenserV1106_APIV300.pdb

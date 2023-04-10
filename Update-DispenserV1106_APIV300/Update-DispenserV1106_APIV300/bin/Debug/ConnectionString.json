@@ -1,0 +1,7 @@
+{
+  "ConnectionStrings": {
+    "ConnectionString": "10.195.2.64",
+	"Service": "Dispenser,API"
+  }
+}
+//"Dispenser,Tankgauge,API,WebConfig,WebSupport"
