@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "w9xMiTIsYDohgjK73lqUxNaJjXJCswT3mlwjTp1iRtbKDnShct0I/uo8UOT4jbDXU7684FitobHeDqJlRE1q+Q==",
+  "success": true,
+  "projectFilePath": "D:\\PTT_Digital\\Git\\PTTDIGITAL-LAVENDER-TANKGUAGE\\TankGaugeProtocol\\TankGaugeProtocol.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Aof\\.nuget\\packages\\microsoft.netcore.platforms\\3.0.0-preview7.19362.9\\microsoft.netcore.platforms.3.0.0-preview7.19362.9.nupkg.sha512",
+    "C:\\Users\\Aof\\.nuget\\packages\\microsoft.win32.registry\\4.6.0-preview7.19362.9\\microsoft.win32.registry.4.6.0-preview7.19362.9.nupkg.sha512",
+    "C:\\Users\\Aof\\.nuget\\packages\\runtime.linux-arm.runtime.native.system.io.ports\\4.6.0-preview7.19362.9\\runtime.linux-arm.runtime.native.system.io.ports.4.6.0-preview7.19362.9.nupkg.sha512",
+    "C:\\Users\\Aof\\.nuget\\packages\\runtime.linux-arm64.runtime.native.system.io.ports\\4.6.0-preview7.19362.9\\runtime.linux-arm64.runtime.native.system.io.ports.4.6.0-preview7.19362.9.nupkg.sha512",
+    "C:\\Users\\Aof\\.nuget\\packages\\runtime.linux-x64.runtime.native.system.io.ports\\4.6.0-preview7.19362.9\\runtime.linux-x64.runtime.native.system.io.ports.4.6.0-preview7.19362.9.nupkg.sha512",
+    "C:\\Users\\Aof\\.nuget\\packages\\runtime.native.system.io.ports\\4.6.0-preview7.19362.9\\runtime.native.system.io.ports.4.6.0-preview7.19362.9.nupkg.sha512",
+    "C:\\Users\\Aof\\.nuget\\packages\\runtime.osx-x64.runtime.native.system.io.ports\\4.6.0-preview7.19362.9\\runtime.osx-x64.runtime.native.system.io.ports.4.6.0-preview7.19362.9.nupkg.sha512",
+    "C:\\Users\\Aof\\.nuget\\packages\\system.io.ports\\4.6.0-preview7.19362.9\\system.io.ports.4.6.0-preview7.19362.9.nupkg.sha512",
+    "C:\\Users\\Aof\\.nuget\\packages\\system.security.accesscontrol\\4.6.0-preview7.19362.9\\system.security.accesscontrol.4.6.0-preview7.19362.9.nupkg.sha512",
+    "C:\\Users\\Aof\\.nuget\\packages\\system.security.principal.windows\\4.6.0-preview7.19362.9\\system.security.principal.windows.4.6.0-preview7.19362.9.nupkg.sha512"
+  ],
+  "logs": []
+}
