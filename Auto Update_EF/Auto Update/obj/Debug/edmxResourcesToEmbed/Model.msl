@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="STATIONDBModelStoreContainer" CdmEntityContainer="STATIONDBEntities">
+    <EntitySetMapping Name="service_version">
+      <EntityTypeMapping TypeName="STATIONDBModel.service_version">
+        <MappingFragment StoreEntitySet="service_version">
+          <ScalarProperty Name="id_station" ColumnName="id_station" />
+          <ScalarProperty Name="dispenser" ColumnName="dispenser" />
+          <ScalarProperty Name="tankgauge" ColumnName="tankgauge" />
+          <ScalarProperty Name="monitor" ColumnName="monitor" />
+          <ScalarProperty Name="gaia" ColumnName="gaia" />
+          <ScalarProperty Name="api" ColumnName="api" />
+          <ScalarProperty Name="web_config" ColumnName="web_config" />
+          <ScalarProperty Name="web_suppot" ColumnName="web_suppot" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="services">
+      <EntityTypeMapping TypeName="STATIONDBModel.service">
+        <MappingFragment StoreEntitySet="services">
+          <ScalarProperty Name="service_id" ColumnName="service_id" />
+          <ScalarProperty Name="service_name" ColumnName="service_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="setting_config">
+      <EntityTypeMapping TypeName="STATIONDBModel.setting_config">
+        <MappingFragment StoreEntitySet="setting_config">
+          <ScalarProperty Name="config_id" ColumnName="config_id" />
+          <ScalarProperty Name="data_key" ColumnName="data_key" />
+          <ScalarProperty Name="data_value" ColumnName="data_value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="station_data">
+      <EntityTypeMapping TypeName="STATIONDBModel.station_data">
+        <MappingFragment StoreEntitySet="station_data">
+          <ScalarProperty Name="station_bu" ColumnName="station_bu" />
+          <ScalarProperty Name="station_id" ColumnName="station_id" />
+          <ScalarProperty Name="station_pbl" ColumnName="station_pbl" />
+          <ScalarProperty Name="station_name" ColumnName="station_name" />
+          <ScalarProperty Name="station_ip" ColumnName="station_ip" />
+          <ScalarProperty Name="brand" ColumnName="brand" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="station_installer">
+      <EntityTypeMapping TypeName="STATIONDBModel.station_installer">
+        <MappingFragment StoreEntitySet="station_installer">
+          <ScalarProperty Name="result_update" ColumnName="result_update" />
+          <ScalarProperty Name="result_transfer" ColumnName="result_transfer" />
+          <ScalarProperty Name="station_id" ColumnName="station_id" />
+          <ScalarProperty Name="station_pbl" ColumnName="station_pbl" />
+          <ScalarProperty Name="station_bu" ColumnName="station_bu" />
+          <ScalarProperty Name="station_name" ColumnName="station_name" />
+          <ScalarProperty Name="station_ip" ColumnName="station_ip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

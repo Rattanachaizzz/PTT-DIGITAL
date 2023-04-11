@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="STATIONDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="service_version">
+    <Key>
+      <PropertyRef Name="id_station" />
+    </Key>
+    <Property Name="id_station" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="dispenser" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="tankgauge" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="monitor" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="gaia" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="api" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="web_config" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="web_suppot" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="service">
+    <Key>
+      <PropertyRef Name="service_id" />
+    </Key>
+    <Property Name="service_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="service_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="setting_config">
+    <Key>
+      <PropertyRef Name="config_id" />
+    </Key>
+    <Property Name="config_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="data_key" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="data_value" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="station_data">
+    <Key>
+      <PropertyRef Name="station_id" />
+    </Key>
+    <Property Name="station_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="station_pbl" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="station_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="station_ip" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="brand" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="station_bu" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="station_installer">
+    <Key>
+      <PropertyRef Name="station_id" />
+    </Key>
+    <Property Name="station_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="station_pbl" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="station_bu" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="station_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="station_ip" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="result_transfer" Type="Boolean" />
+    <Property Name="result_update" Type="Boolean" />
+  </EntityType>
+  <EntityContainer Name="STATIONDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="service_version" EntityType="Self.service_version" />
+    <EntitySet Name="services" EntityType="Self.service" />
+    <EntitySet Name="setting_config" EntityType="Self.setting_config" />
+    <EntitySet Name="station_data" EntityType="Self.station_data" />
+    <EntitySet Name="station_installer" EntityType="Self.station_installer" />
+  </EntityContainer>
+</Schema>

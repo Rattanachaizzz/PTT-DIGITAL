@@ -1,0 +1,91 @@
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\Auto Update.exe.config
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\Auto Update.exe
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\Auto Update.pdb
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\Bunifu.Charts.WinForms.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\Bunifu.Dataviz.WinForms.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\Bunifu.UI.WinForms.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\Bunifu.UI.WinForms.1.5.3.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\EntityFramework.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\Microsoft.Bcl.HashCode.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\Microsoft.Data.SqlClient.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\Microsoft.EntityFrameworkCore.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\Microsoft.EntityFrameworkCore.Abstractions.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\Microsoft.EntityFrameworkCore.Design.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\Microsoft.EntityFrameworkCore.Relational.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\Microsoft.EntityFrameworkCore.SqlServer.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\Microsoft.Extensions.Caching.Abstractions.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\Microsoft.Extensions.Caching.Memory.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\Microsoft.Extensions.Configuration.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\Microsoft.Extensions.Configuration.Binder.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\Microsoft.Extensions.Logging.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\Microsoft.Extensions.Options.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\Microsoft.Extensions.Primitives.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\Microsoft.Identity.Client.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\Microsoft.IdentityModel.Logging.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\Microsoft.IdentityModel.Protocols.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\Microsoft.IdentityModel.Tokens.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\Microsoft.Win32.Registry.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\Microsoft.Win32.Registry.AccessControl.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\Microsoft.Win32.SystemEvents.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\Newtonsoft.Json.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\Renci.SshNet.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\RestSharp.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\System.Buffers.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\System.CodeDom.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\System.Collections.Immutable.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\System.Configuration.ConfigurationManager.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\System.Data.Odbc.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\System.Data.OleDb.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\System.Data.SqlClient.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\System.Diagnostics.EventLog.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\System.Diagnostics.PerformanceCounter.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\System.Drawing.Common.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\System.IO.FileSystem.AccessControl.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\System.IO.Packaging.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\System.IO.Ports.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\System.Memory.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\System.Numerics.Vectors.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\System.Security.AccessControl.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\System.Security.Cryptography.Cng.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\System.Security.Cryptography.Pkcs.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\System.Security.Cryptography.ProtectedData.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\System.Security.Cryptography.Xml.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\System.Security.Permissions.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\System.Security.Principal.Windows.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\System.ServiceModel.Syndication.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\System.ServiceProcess.ServiceController.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\System.Text.Encoding.CodePages.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\System.Threading.AccessControl.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\bin\Release\System.Threading.Tasks.Extensions.xml
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\obj\Release\Auto Update.csproj.AssemblyReference.cache
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\obj\Release\Auto Update.csproj.SuggestedBindingRedirects.cache
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\obj\Release\Auto_Update.Add.resources
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\obj\Release\Auto_Update.Dialog_Delect.resources
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\obj\Release\Auto_Update.Dialog_OK.resources
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\obj\Release\Auto_Update.Edit.resources
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\obj\Release\Auto_Update.Form1.resources
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\obj\Release\Auto_Update.Properties.Resources.resources
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\obj\Release\Auto_Update.RJTextBox.resources
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\obj\Release\Auto_Update.UserControl_Help.resources
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\obj\Release\Auto_Update.UserControl_Home.resources
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\obj\Release\Auto_Update.UserControl_Management_Data_Station.resources
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\obj\Release\Auto_Update.UserControl_Set_Config_Station.resources
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\obj\Release\Auto_Update.UserControl_Update_Service.resources
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\obj\Release\Auto_Update.UserControl_About.resources
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\obj\Release\Auto Update.csproj.GenerateResource.cache
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\obj\Release\Auto Update.csproj.CoreCompileInputs.cache
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\obj\Release\Auto Update.csproj.Fody.CopyLocal.cache
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\obj\Release\Auto Update.csproj.CopyComplete
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\obj\Release\Auto Update.exe
+C:\Users\Aof\Desktop\Auto Update_EF\Auto Update\obj\Release\Auto Update.pdb

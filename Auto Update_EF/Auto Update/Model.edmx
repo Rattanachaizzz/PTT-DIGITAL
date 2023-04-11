@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="STATIONDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="service_version">
+          <Key>
+            <PropertyRef Name="id_station" />
+          </Key>
+          <Property Name="id_station" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="dispenser" Type="text" />
+          <Property Name="tankgauge" Type="text" />
+          <Property Name="monitor" Type="text" />
+          <Property Name="gaia" Type="text" />
+          <Property Name="api" Type="text" />
+          <Property Name="web_config" Type="text" />
+          <Property Name="web_suppot" Type="text" />
+        </EntityType>
+        <EntityType Name="services">
+          <Key>
+            <PropertyRef Name="service_id" />
+          </Key>
+          <Property Name="service_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="service_name" Type="text" />
+        </EntityType>
+        <EntityType Name="setting_config">
+          <Key>
+            <PropertyRef Name="config_id" />
+          </Key>
+          <Property Name="config_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="data_key" Type="text" />
+          <Property Name="data_value" Type="text" />
+        </EntityType>
+        <EntityType Name="station_data">
+          <Key>
+            <PropertyRef Name="station_id" />
+          </Key>
+          <Property Name="station_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="station_pbl" Type="text" />
+          <Property Name="station_bu" Type="text" />
+          <Property Name="station_name" Type="text" />
+          <Property Name="station_ip" Type="text" />
+          <Property Name="brand" Type="text" />
+        </EntityType>
+        <EntityType Name="station_installer">
+          <Key>
+            <PropertyRef Name="station_id" />
+          </Key>
+          <Property Name="station_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="station_pbl" Type="text" />
+          <Property Name="station_bu" Type="text" />
+          <Property Name="station_name" Type="text" />
+          <Property Name="station_ip" Type="text" />
+          <Property Name="result_transfer" Type="bit" />
+          <Property Name="result_update" Type="bit" />
+        </EntityType>
+        <EntityContainer Name="STATIONDBModelStoreContainer">
+          <EntitySet Name="service_version" EntityType="Self.service_version" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="services" EntityType="Self.services" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="setting_config" EntityType="Self.setting_config" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="station_data" EntityType="Self.station_data" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="station_installer" EntityType="Self.station_installer" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="STATIONDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="service_version">
+          <Key>
+            <PropertyRef Name="id_station" />
+          </Key>
+          <Property Name="id_station" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="dispenser" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="tankgauge" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="monitor" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="gaia" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="api" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="web_config" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="web_suppot" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="service">
+          <Key>
+            <PropertyRef Name="service_id" />
+          </Key>
+          <Property Name="service_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="service_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="setting_config">
+          <Key>
+            <PropertyRef Name="config_id" />
+          </Key>
+          <Property Name="config_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="data_key" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="data_value" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="station_data">
+          <Key>
+            <PropertyRef Name="station_id" />
+          </Key>
+          <Property Name="station_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="station_pbl" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="station_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="station_ip" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="brand" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="station_bu" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="station_installer">
+          <Key>
+            <PropertyRef Name="station_id" />
+          </Key>
+          <Property Name="station_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="station_pbl" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="station_bu" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="station_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="station_ip" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="result_transfer" Type="Boolean" />
+          <Property Name="result_update" Type="Boolean" />
+        </EntityType>
+        <EntityContainer Name="STATIONDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="service_version" EntityType="Self.service_version" />
+          <EntitySet Name="services" EntityType="Self.service" />
+          <EntitySet Name="setting_config" EntityType="Self.setting_config" />
+          <EntitySet Name="station_data" EntityType="Self.station_data" />
+          <EntitySet Name="station_installer" EntityType="Self.station_installer" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="STATIONDBModelStoreContainer" CdmEntityContainer="STATIONDBEntities">
+          <EntitySetMapping Name="service_version">
+            <EntityTypeMapping TypeName="STATIONDBModel.service_version">
+              <MappingFragment StoreEntitySet="service_version">
+                <ScalarProperty Name="id_station" ColumnName="id_station" />
+                <ScalarProperty Name="dispenser" ColumnName="dispenser" />
+                <ScalarProperty Name="tankgauge" ColumnName="tankgauge" />
+                <ScalarProperty Name="monitor" ColumnName="monitor" />
+                <ScalarProperty Name="gaia" ColumnName="gaia" />
+                <ScalarProperty Name="api" ColumnName="api" />
+                <ScalarProperty Name="web_config" ColumnName="web_config" />
+                <ScalarProperty Name="web_suppot" ColumnName="web_suppot" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="services">
+            <EntityTypeMapping TypeName="STATIONDBModel.service">
+              <MappingFragment StoreEntitySet="services">
+                <ScalarProperty Name="service_id" ColumnName="service_id" />
+                <ScalarProperty Name="service_name" ColumnName="service_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="setting_config">
+            <EntityTypeMapping TypeName="STATIONDBModel.setting_config">
+              <MappingFragment StoreEntitySet="setting_config">
+                <ScalarProperty Name="config_id" ColumnName="config_id" />
+                <ScalarProperty Name="data_key" ColumnName="data_key" />
+                <ScalarProperty Name="data_value" ColumnName="data_value" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="station_data">
+            <EntityTypeMapping TypeName="STATIONDBModel.station_data">
+              <MappingFragment StoreEntitySet="station_data">
+                <ScalarProperty Name="station_bu" ColumnName="station_bu" />
+                <ScalarProperty Name="station_id" ColumnName="station_id" />
+                <ScalarProperty Name="station_pbl" ColumnName="station_pbl" />
+                <ScalarProperty Name="station_name" ColumnName="station_name" />
+                <ScalarProperty Name="station_ip" ColumnName="station_ip" />
+                <ScalarProperty Name="brand" ColumnName="brand" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="station_installer">
+            <EntityTypeMapping TypeName="STATIONDBModel.station_installer">
+              <MappingFragment StoreEntitySet="station_installer">
+                <ScalarProperty Name="result_update" ColumnName="result_update" />
+                <ScalarProperty Name="result_transfer" ColumnName="result_transfer" />
+                <ScalarProperty Name="station_id" ColumnName="station_id" />
+                <ScalarProperty Name="station_pbl" ColumnName="station_pbl" />
+                <ScalarProperty Name="station_bu" ColumnName="station_bu" />
+                <ScalarProperty Name="station_name" ColumnName="station_name" />
+                <ScalarProperty Name="station_ip" ColumnName="station_ip" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

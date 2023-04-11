@@ -1,0 +1,5 @@
+{
+	"ConnectionStrings": {
+		"ConnectionString" : "Data Source=10.195.2.109;Initial Catalog=EmployeeDb;Persist Security Info=True;User ID=sa;Password=pTT!CT01"
+	}
+}

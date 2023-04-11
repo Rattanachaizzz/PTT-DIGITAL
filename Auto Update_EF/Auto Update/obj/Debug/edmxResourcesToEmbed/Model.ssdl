@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="STATIONDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="service_version">
+    <Key>
+      <PropertyRef Name="id_station" />
+    </Key>
+    <Property Name="id_station" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="dispenser" Type="text" />
+    <Property Name="tankgauge" Type="text" />
+    <Property Name="monitor" Type="text" />
+    <Property Name="gaia" Type="text" />
+    <Property Name="api" Type="text" />
+    <Property Name="web_config" Type="text" />
+    <Property Name="web_suppot" Type="text" />
+  </EntityType>
+  <EntityType Name="services">
+    <Key>
+      <PropertyRef Name="service_id" />
+    </Key>
+    <Property Name="service_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="service_name" Type="text" />
+  </EntityType>
+  <EntityType Name="setting_config">
+    <Key>
+      <PropertyRef Name="config_id" />
+    </Key>
+    <Property Name="config_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="data_key" Type="text" />
+    <Property Name="data_value" Type="text" />
+  </EntityType>
+  <EntityType Name="station_data">
+    <Key>
+      <PropertyRef Name="station_id" />
+    </Key>
+    <Property Name="station_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="station_pbl" Type="text" />
+    <Property Name="station_bu" Type="text" />
+    <Property Name="station_name" Type="text" />
+    <Property Name="station_ip" Type="text" />
+    <Property Name="brand" Type="text" />
+  </EntityType>
+  <EntityType Name="station_installer">
+    <Key>
+      <PropertyRef Name="station_id" />
+    </Key>
+    <Property Name="station_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="station_pbl" Type="text" />
+    <Property Name="station_bu" Type="text" />
+    <Property Name="station_name" Type="text" />
+    <Property Name="station_ip" Type="text" />
+    <Property Name="result_transfer" Type="bit" />
+    <Property Name="result_update" Type="bit" />
+  </EntityType>
+  <EntityContainer Name="STATIONDBModelStoreContainer">
+    <EntitySet Name="service_version" EntityType="Self.service_version" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="services" EntityType="Self.services" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="setting_config" EntityType="Self.setting_config" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="station_data" EntityType="Self.station_data" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="station_installer" EntityType="Self.station_installer" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
