@@ -32,16 +32,18 @@ module.exports.ScheduleJob = async (socket, req) => {
       }));
       let checkInsert = checkInsertArray.some(element => element.status === `denied`)
       if (checkInsert === false) {
-        socket.emit('response', { "clientID": siteCode , "message": checkInsertArray })
+        socket.emit('response', checkInsertArray[0] )
       } else {
-        socket.emit('response', { "clientID": siteCode , "message": checkInsertArray })
+        socket.emit('response', checkInsertArray[0] )
       }
     } else if (req.messageType === `trigger`) {
       const actionID = req.actionID
+      const command = req.command
       const dataSelectActions = await baseControl.serviceBase.SelectActionID(actionID);
       if (dataSelectActions.length !== 0) {
         if (dataSelectActions[0].operation === "apt-install") {
-          exec(`sudo apt -y  install /var/cache/apt/archives/${dataSelectActions[0].service_name}_${dataSelectActions[0].version}_amd64.deb`, (error, stdout, stderr) => {
+           exec( command , (error, stdout, stderr) => {
+          //exec(`sudo apt -y  install /var/cache/apt/archives/${dataSelectActions[0].service_name}_${dataSelectActions[0].version}_amd64.deb`, (error, stdout, stderr) => {
             if (stdout.includes("Setting up")) {
               socket.emit('response', {
                 clientID: siteCode,
@@ -60,7 +62,7 @@ module.exports.ScheduleJob = async (socket, req) => {
             }else{
               if (error) {
                 socket.emit('response', {
-                  siteCode: siteCode,
+                  clientID: siteCode,
                   messageID: messageID,
                   messageType: "response",
                   actionID: dataSelectActions[0].action_id,
@@ -72,7 +74,7 @@ module.exports.ScheduleJob = async (socket, req) => {
               }
               if (stderr) {
                 socket.emit('response', {
-                  siteCode: siteCode,
+                  clientID: siteCode,
                   messageID: messageID,
                   messageType: "response",
                   actionID: dataSelectActions[0].action_id,
@@ -119,59 +121,61 @@ module.exports.ScheduleJob = async (socket, req) => {
               }
             ]
           };
-	const callPurge = function () {
-          exec(`sudo apt -y  purge ${dataSelectActions[0].service_name}`, async (error, stdout, stderr) => {
-            if (error) {
-              socket.emit('response', {
-                clientID: siteCode,
-                messageID: messageID,
-                messageType: "response",
-                actionID: dataSelectActions[0].action_id,
-                status: `denied`,
-                timeStamp: moment().format('YYYY-MM-DD HH:mm:ss'),
-                error: error.message
-              })
-            }
-            if (stderr) {
-              socket.emit('response', {
-                clientID: siteCode,
-                messageID: messageID,
-                messageType: "response",
-                actionID: dataSelectActions[0].action_id,
-                status: `denied`,
-                timeStamp: moment().format('YYYY-MM-DD HH:mm:ss'),
-                error: stderr
-              })
-            }
-            socket.emit('response', {
-              clientID: siteCode,
-              messageID: messageID,
-              messageType: "response",
-              actionID: dataSelectActions[0].action_id,
-              status: `accepted`,
-              timeStamp: moment().format('YYYY-MM-DD HH:mm:ss'),
-              error: null
-            })
-            service.serviceUpdate.sendStatus_Purging(siteCode, messageID, dataSelectActions[0].action_id, dataSelectActions[0].service_name, socket)
-            responsePurge();  
-	   });
-	}
 
-       const responsePurge = function () {
-          let responeInsMain = service.serviceUpdate.checkPurgeService(dataSelectActions[0].service_name);
-          responeInsMain.then((value) => {
-            if (value.status_code === 0) {
-              socket.emit('operation-report', msgSend_purge_complete);
-              baseControl.serviceBase.UpdateStatusCode(value, dataSelectActions[0]) // update status db.sqlite
-            } else {
-              socket.emit('operation-report', msgSend_purge_uncomplete);
-              baseControl.serviceBase.UpdateStatusCode(value, dataSelectActions[0]) // update status db.sqlite
-            }
-          })
-	 }
-        callPurge(responsePurge)
+           const command = req.command
+           const callPurge = function () {
+            exec( command , async (error, stdout, stderr) => {
+              //if (error) {
+              //  socket.emit('response', {
+              //    clientID: siteCode,
+              //    messageID: messageID,
+              //    messageType: "response",
+              //    actionID: dataSelectActions[0].action_id,
+              //    status: `denied`,
+              //    timeStamp: moment().format('YYYY-MM-DD HH:mm:ss'),
+              //    error: error.message
+              //  })
+              //}
+              //if (stderr) {
+              //  socket.emit('response', {
+              //    clientID: siteCode,
+              //   messageID: messageID,
+              //    messageType: "response",
+              //    actionID: dataSelectActions[0].action_id,
+              //    status: `denied`,
+              //    timeStamp: moment().format('YYYY-MM-DD HH:mm:ss'),
+              //    error: stderr
+              //  })
+              //}
+              socket.emit('response', {
+                clientID: siteCode,
+                messageID: messageID,
+                messageType: "response",
+                actionID: dataSelectActions[0].action_id,
+                status: `accepted`,
+                timeStamp: moment().format('YYYY-MM-DD HH:mm:ss'),
+                error: null
+              })
+              service.serviceUpdate.sendStatus_Purging(siteCode, messageID, dataSelectActions[0].action_id, dataSelectActions[0].service_name, socket)
+              responsePurge();
+            });
+          }
+
+          const responsePurge = function () {
+            let responeInsMain = service.serviceUpdate.checkPurgeService(dataSelectActions[0].service_name);
+            responeInsMain.then((value) => {
+              if (value.status_code === 0) {
+                socket.emit('operation-report', msgSend_purge_complete);
+                baseControl.serviceBase.UpdateStatusCode(value, dataSelectActions[0]) // update status db.sqlite
+              } else {
+                socket.emit('operation-report', msgSend_purge_uncomplete);
+                baseControl.serviceBase.UpdateStatusCode(value, dataSelectActions[0]) // update status db.sqlite
+              }
+            })
+          }
+          callPurge(responsePurge)
+
         } else {
-          //response.send(200, `operation not match in case`)
           socket.emit('response', {
             messageID: req.messageType,
             messageType: messageType,
@@ -182,7 +186,6 @@ module.exports.ScheduleJob = async (socket, req) => {
           });
         }
       } else {
-        //res.send(200, "Can not found data")
         socket.emit('response', {
           messageID: messageID,
           messageType: messageType,

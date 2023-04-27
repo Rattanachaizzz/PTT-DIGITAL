@@ -9,12 +9,13 @@ module.exports.InsertAction = async (data, siteCode,messageID) => {
     let Description = data.operation !== "apt-purge" ? "Waiting for download" : "Waiting for trigger/execute";
     db.run(`UPDATE station_code SET value == "${siteCode}" WHERE key = "site_code"`),
       db.run(`UPDATE station_code SET value == "1.0.0" WHERE key = "version"`),
-      db.run(`INSERT INTO "action_update" ("message_id","action_id", "service_name", "operation", "version", "download_date", "execute_by", "execute_date", "rollback_enable", "rollback_version", "create_date", "completed_date", "status_code", "Description") VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      db.run(`INSERT INTO "action_update" ("message_id","action_id", "service_name", "operation","command", "version", "download_date", "execute_by", "execute_date", "rollback_enable", "rollback_version", "create_date", "completed_date", "status_code", "Description") VALUES (?,?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
         [
           messageID, // message_id
-          data.action_id, // message_id
+          data.actionID, // action_id
           data.serviceName, // service_name
           data.operation, // operation
+          data.command,   //command
           data.version, // version
           data.downloadDate, // download_date
           data.executeBy, // execute_by

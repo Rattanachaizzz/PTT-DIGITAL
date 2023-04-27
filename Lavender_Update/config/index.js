@@ -30,6 +30,21 @@ const setting = {
       console.error(error.message);
     }
   }
+
+ async function serviceVersion() {
+    const Connectdb = setting.dbSettings.pool
+    try {
+      let serviceVersion = await Connectdb.query(`select * from lavender.site_config WHERE key LIKE '%Version%';`)
+      let result = serviceVersion.rows
+      //console.log(result)
+      return result
+    }
+    catch (error) {
+      // Handle the error
+      console.error(error.message);
+    }
+  }
+
   async function Login() {
     try {
       let response = await axios.post(setting.urlLogin, qs.stringify({ 'terminal_id': `${setting.terminalId}` }))
@@ -44,6 +59,7 @@ const setting = {
   
  const getSite = Site()
  const postLogin = Login()
+ const getServiceVersion = serviceVersion()
 
 module.exports = {
     name: 'Lavender API : UploadImage Group',
@@ -56,6 +72,7 @@ module.exports = {
     },
     getSite : getSite,
     postLogin : postLogin,
+    getServiceVersion : getServiceVersion,
     setting : setting,
     serviceName : ['lavender-dispenser', 'lavender-tankgauge', 'lavender-webconfig', 'lavender-websupport', 'lavender-monitor', 'pm2-root', 'postgresql'],
     descriptionName : 'LAV-FAN-CTRL'
