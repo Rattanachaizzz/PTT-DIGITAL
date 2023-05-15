@@ -1,0 +1,90 @@
+# This file is where you define your pipelines. You can define multiple.
+# For more information on multiple pipelines, see the documentation:
+#   https://www.elastic.co/guide/en/logstash/current/multiple-pipelines.html
+
+#- pipeline.id: main
+#  path.config: "/etc/logstash/conf.d/*.conf"
+
+#- pipeline.id: test_pipeline
+#  path.config: "/etc/logstash/conf.d/test_pipeline.conf"
+
+  ##################################################################
+  ##                     Consumer for RabbitMQ                    ##
+  ##################################################################
+
+##################################### PostgrasQL #########################################
+
+
+#  - pipeline.id: consumer_rabbit_site_config
+#    path.config: "/etc/logstash/conf.d/consumer_rabbit/consume_site.conf"
+
+#  - pipeline.id: consumer_rabbit_pump
+#    path.config: "/etc/logstash/conf.d/consumer_rabbit/consume_pump_logs.conf"
+
+#  - pipeline.id: consumer_rabbit_tank
+#    path.config: "/etc/logstash/conf.d/consumer_rabbit/consume_tank.conf"
+
+#  - pipeline.id: consumer_rabbit_transaction
+#    path.config: "/etc/logstash/conf.d/consumer_rabbit/consume_transaction.conf"
+
+#  - pipeline.id: consumer_rabbit_gd_profile
+#    path.config: "/etc/logstash/conf.d/consumer_rabbit/consume_gd_profile.conf"
+
+#  - pipeline.id: consumer_rabbit_price_profile
+#    path.config: "/etc/logstash/conf.d/consumer_rabbit/consume_price_profile.conf"
+
+
+####################################### Real-Time ATG ##########################################
+
+
+#  - pipeline.id: consumer_rabbit_realtime_atg_alarm
+#    path.config: "/etc/logstash/conf.d/consumer_rabbit/consume_realtime_atg_alarm.conf"
+
+#  - pipeline.id: consumer_rabbit_realtime_atg_delivery
+#    path.config: "/etc/logstash/conf.d/consumer_rabbit/consume_realtime_atg_delivery.conf"
+
+#  - pipeline.id: consumer_rabbit_realtime_atg_gd-realtime
+#    path.config: "/etc/logstash/conf.d/consumer_rabbit/consume_realtime_atg_gd-realtime.conf"
+
+#  - pipeline.id: consumer_rabbit_realtime_atg_inventory
+#    path.config: "/etc/logstash/conf.d/consumer_rabbit/consume_realtime_atg_inventory.conf"
+
+
+###################################### Beats #################################################
+
+
+#  - pipeline.id: consumer_rabbit_beat_heartbeat
+#    path.config: "/etc/logstash/conf.d/consumer_rabbit/consume_beat_heartbeat.conf"
+
+#  - pipeline.id: consumer_rabbit_beat_metricbeat
+#    path.config: "/etc/logstash/conf.d/consumer_rabbit/consume_beat_metricbeat.conf"
+
+#  - pipeline.id: consumer_rabbit_beat_filebeat_api
+#    path.config: "/etc/logstash/conf.d/consumer_rabbit/consume_beat_filebeat_api.conf"
+
+#  - pipeline.id: consumer_rabbit_beat_filebeat_atg
+#    path.config: "/etc/logstash/conf.d/consumer_rabbit/consume_beat_filebeat_atg.conf"
+
+#  - pipeline.id: consumer_rabbit_beat_filebeat_lavender_upadte
+#    path.config: "/etc/logstash/conf.d/consumer_rabbit/consume_beat_filebeat_lavender_upadte.conf"
+
+#  - pipeline.id: consumer_rabbit_beat_filebeat_lavender_download
+#    path.config: "/etc/logstash/conf.d/consumer_rabbit/consume_beat_filebeat_lavender_download.conf"
+
+
+
+############################### TCP python ################################
+  
+  - pipeline.id: tcp_beat_filebeat
+    path.config: "/etc/logstash/conf.d/tcp_python/tcp_beat_filebeat.conf"
+
+
+
+
+
+
+
+
+
+#  - pipeline.id: consumer_rabbit_beat_filebeat_dispenser
+#    path.config: "/etc/logstash/conf.d/consumer_rabbit/consume_beat_filebeat_dispenser.conf"
