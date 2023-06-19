@@ -1,0 +1,18 @@
+---Tank Inventory Stations Service ---
+Connecting to Tank Inventory Stations repository...
+Error :  undefined
+[0mGET /lavender_p/Currentvalue [32m200 [0m135.202 ms - -[0m
+[0mGET /lavender_p/Currentvalue/1 [0m- [0m- ms - -[0m
+Error :  undefined
+[0mGET /lavender_p/Currentvalue [32m200 [0m112.970 ms - -[0m
+Error :  undefined
+[0mGET /lavender_p/Currentvalue [32m200 [0m0.941 ms - -[0m
+Error :  undefined
+[0mGET /lavender_p/Currentvalue [32m200 [0m129.273 ms - -[0m
+Error :  undefined
+[0mGET /lavender_p/Currentvalue [32m200 [0m1.122 ms - -[0m
+Error :  undefined
+[0mGET /lavender_p/Currentvalue [32m200 [0m1.030 ms - -[0m
+[0mGET /lavender_p/Currentvalue/1 [0m- [0m- ms - -[0m
+Error :  undefined
+[0mGET /lavender_p/Currentvalue [32m200 [0m129.285 ms - -[0m
