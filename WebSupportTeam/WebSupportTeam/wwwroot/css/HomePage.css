@@ -1,0 +1,79 @@
+﻿.img {
+    height: 50px;
+    width: 250px;
+}
+
+.btn_login {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    display: flex;
+    border-radius: 10px;
+}
+
+.container-fluid {
+    /* border: 2px solid;*/
+    /*background-color: white;*/
+    font-family: 'Cambria Math';
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.link {
+    color: black;
+}
+
+.navbar-nav:hover .dropdown-content {
+    display: block;
+}
+
+ul.dropdown-content {
+    list-style-type: none;
+}
+
+.photo {
+    background-color: blueviolet;
+    height: 450px;
+    width: 100%;
+}
+
+.photo_support {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.title {
+    padding: 70px 0;
+}
+
+.col {
+    /* background-color:brown;*/
+}
+
+.size {
+    /*color:forestgreen;*/
+    font-size: 60px;
+    color: dimgrey;
+    z-index: unset;
+}
+
+.fill-green {
+    fill: #40a944 !important;
+}

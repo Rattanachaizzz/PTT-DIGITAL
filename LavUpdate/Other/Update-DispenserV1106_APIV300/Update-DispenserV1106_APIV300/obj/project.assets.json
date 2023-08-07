@@ -315,11 +315,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Aof\\Desktop\\LavUpdate\\Other\\Update-DispenserV1106_APIV300\\Update-DispenserV1106_APIV300\\Update-DispenserV1106_APIV300.csproj",
+      "projectUniqueName": "D:\\githup\\LavUpdate\\Other\\Update-DispenserV1106_APIV300\\Update-DispenserV1106_APIV300\\Update-DispenserV1106_APIV300.csproj",
       "projectName": "Update-DispenserV1106_APIV300",
-      "projectPath": "C:\\Users\\Aof\\Desktop\\LavUpdate\\Other\\Update-DispenserV1106_APIV300\\Update-DispenserV1106_APIV300\\Update-DispenserV1106_APIV300.csproj",
+      "projectPath": "D:\\githup\\LavUpdate\\Other\\Update-DispenserV1106_APIV300\\Update-DispenserV1106_APIV300\\Update-DispenserV1106_APIV300.csproj",
       "packagesPath": "C:\\Users\\Aof\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Aof\\Desktop\\LavUpdate\\Other\\Update-DispenserV1106_APIV300\\Update-DispenserV1106_APIV300\\obj\\",
+      "outputPath": "D:\\githup\\LavUpdate\\Other\\Update-DispenserV1106_APIV300\\Update-DispenserV1106_APIV300\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

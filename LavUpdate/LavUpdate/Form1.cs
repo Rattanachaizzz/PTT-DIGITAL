@@ -282,7 +282,7 @@ namespace LavUpdate
                             if (result.Contains(nameFileDelete)) //Have file 
                             {
                                 //Delete file
-                                command_exc = $"echo 'muj,nv,ufvdw,h' | sudo -S rm -r /home/lavender/" + nameFileDelete;
+                                command_exc = $"echo 'muj,nv,ufvdw,h' | sudo -S rm -r /home/lavender/" + nameFileDelete.Replace(".tar.gz","") + "*";
                                 command = client.CreateCommand(command_exc);
                                 result = command.Execute();
 
@@ -568,7 +568,6 @@ namespace LavUpdate
                                         string dispenserStatus = command.Execute().Contains("(running)") ? "active" : "inactive";
 
                                         //Add to list
-                                        //serviceVersions.Add("dispenser", $"{dispenserVersion} [{dispenserStatus}]");
                                         serviceVersions.Add(new KeyValuePair<string, string>("dispenser", $"{dispenserVersion} [{dispenserStatus}]"));
                                     }
                                     else if (r.Contains("Tank_Gauge_Version"))
@@ -582,7 +581,6 @@ namespace LavUpdate
                                         string tankgaugeStatus = command.Execute().Contains("(running)") ? "active" : "inactive";
 
                                         //Add to list
-                                        //serviceVersions.Add($"{tankgaugeVersion} [{tankgaugeStatus}]");
                                         serviceVersions.Add(new KeyValuePair<string, string>("tankgauge", $"{tankgaugeVersion} [{tankgaugeStatus}]"));
                                     }
                                     else if (r.Contains("GAIA_Version"))
@@ -596,7 +594,6 @@ namespace LavUpdate
                                         string gaiaStatus = command.Execute().Contains("(running)") ? "active" : "inactive";
 
                                         //Add to list
-                                        //serviceVersions.Add($"{gaiaVersion} [{gaiaStatus}]");
                                         serviceVersions.Add(new KeyValuePair<string, string>("gaia", $"{gaiaVersion} [{gaiaStatus}]"));
                                     }
                                     else if (r.Contains("Monitor_Version"))
@@ -610,7 +607,6 @@ namespace LavUpdate
                                         string monitorStatus = command.Execute().Contains("(running)") ? "active" : "inactive";
 
                                         //Add to list
-                                        //serviceVersions.Add($"{monitorVersion} [{monitorStatus}]");
                                         serviceVersions.Add(new KeyValuePair<string, string>("monitor", $"{monitorVersion} [{monitorStatus}]"));
                                     }
                                     else if (r.Contains("WebConfig_Version"))
@@ -624,7 +620,6 @@ namespace LavUpdate
                                         string webconfigStatus = command.Execute().Contains("(running)") ? "active" : "inactive";
 
                                         //Add to list
-                                        //serviceVersions.Add($"{webconfigVersion} [{webconfigStatus}]");
                                         serviceVersions.Add(new KeyValuePair<string, string>("webconfig", $"{webconfigVersion} [{webconfigStatus}]"));
                                     }
                                     else if (r.Contains("WebSupport_Version"))
@@ -638,7 +633,6 @@ namespace LavUpdate
                                         string websupportStatus = command.Execute().Contains("(running)") ? "active" : "inactive";
 
                                         //Add to list
-                                        //serviceVersions.Add($"{websupportVersion} [{websupportStatus}]");
                                         serviceVersions.Add(new KeyValuePair<string, string>("websupport", $"{websupportVersion} [{websupportStatus}]"));
                                     }
                                     else if (r.Contains("LavenderUpdate_Version"))
@@ -652,7 +646,6 @@ namespace LavUpdate
                                         string lavupdateStatus = command.Execute().Contains("(running)") ? "active" : "inactive";
 
                                         //Add to list
-                                        //serviceVersions.Add($"{lavupdateVersion} [{lavupdateStatus}]");
                                         serviceVersions.Add(new KeyValuePair<string, string>("lavupdate", $"{lavupdateVersion} [{lavupdateStatus}]"));
                                     }
                                     else if (r.Contains("API_Version"))
@@ -663,10 +656,9 @@ namespace LavUpdate
                                         //Get status service
                                         command_exc = $"echo 'muj,nv,ufvdw,h' | sudo -S pm2 ls";
                                         command = client.CreateCommand(command_exc);
-                                        string apiStatus = command.Execute();
+                                        string apiStatus = command.Execute().Contains("stopped") || command.Execute().Contains("errored") ? "inactive" : "active";
 
                                         //Add to list
-                                        //serviceVersions.Add($"{apiVersion} [{apiStatus}]");
                                         serviceVersions.Add(new KeyValuePair<string, string>("api", $"{apiVersion} [{apiStatus}]"));
                                     }
                                 }
@@ -779,10 +771,10 @@ namespace LavUpdate
                                 //Check extract file ?
                                 if (result.Contains(nameFileUpdate.Replace(".tar.gz",""))) //extract file success
                                 {
-
-                                    command_exc = $"echo 'muj,nv,ufvdw,h' | sudo -S dotnet /home/lavender/{nameFileUpdate.Replace(".tar.gz", "")}/{nameFileUpdate.Replace(".tar.gz", ".dll")}";
-                                    command = client.CreateCommand(command_exc);
-                                    result = command.Execute(); 
+                                    //Exercuit program
+                                    command_exc = $"echo 'muj,nv,ufvdw,h' | sudo -S cd /home/lavender/Update-DispenserV1106_APIV300; dotnet /home/lavender/{nameFileUpdate.Replace(".tar.gz", "")}/{nameFileUpdate.Replace(".tar.gz", ".dll")}";
+                                    command = client.RunCommand(command_exc);
+                                    result = command.Result;
 
                                     //Deploy Success
                                     ResultDeploy(p, "Success", "-");
