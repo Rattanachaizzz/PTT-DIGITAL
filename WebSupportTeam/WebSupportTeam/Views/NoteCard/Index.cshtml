@@ -1,0 +1,721 @@
+﻿@model List<WebSupportTeam.Models.cards>
+@using WebSupportTeam.Models;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Bootstrap CRUD Data Table for Database with Modal Form</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <link href="~/css/HomePage.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="~/font-awesome/css/fontawesome.min.css" />
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            color: #566787;
+            background: #f5f5f5;
+            font-family: 'Varela Round', sans-serif;
+            font-size: 13px;
+        }
+
+        .table-responsive {
+            margin: 30px 0;
+        }
+
+        .table-wrapper {
+            background: #fff;
+            padding: 20px 25px;
+            border-radius: 3px;
+            min-width: 1000px;
+            box-shadow: 0 1px 1px rgba(0,0,0,.05);
+        }
+
+        .table-title {
+            padding-bottom: 15px;
+            background: #435d7d;
+            color: #fff;
+            padding: 16px 30px;
+            min-width: 100%;
+            margin: -20px -25px 10px;
+            border-radius: 3px 3px 0 0;
+        }
+
+            .table-title h2 {
+                margin: 5px 0 0;
+                font-size: 24px;
+            }
+
+            .table-title .btn-group {
+                float: right;
+            }
+
+            .table-title .btn {
+                color: #fff;
+                float: right;
+                font-size: 13px;
+                border: none;
+                min-width: 50px;
+                border-radius: 2px;
+                border: none;
+                outline: none !important;
+                margin-left: 10px;
+            }
+
+                .table-title .btn i {
+                    float: left;
+                    font-size: 21px;
+                    margin-right: 5px;
+                }
+
+                .table-title .btn span {
+                    float: left;
+                    margin-top: 2px;
+                }
+
+        table.table tr th, table.table tr td {
+            border-color: #e9e9e9;
+            padding: 10px 15px;
+            vertical-align: middle;
+            /* border: solid;*/
+            text-align: center;
+        }
+
+        table.table-striped tbody tr:nth-of-type(odd) {
+            background-color: #fcfcfc;
+        }
+
+        table.table-striped.table-hover tbody tr:hover {
+            background: #f5f5f5;
+        }
+
+        table.table th i {
+            font-size: 13px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        table.table td:last-child i {
+            opacity: 0.9;
+            font-size: 22px;
+            margin: 0 5px;
+        }
+
+        table.table td a {
+            font-weight: bold;
+            color: #566787;
+            display: inline-block;
+            text-decoration: none;
+            outline: none !important;
+        }
+
+            table.table td a:hover {
+                color: #2196F3;
+            }
+
+            table.table td a.edit {
+                color: #FFC107;
+            }
+
+            table.table td a.delete {
+                color: #F44336;
+            }
+
+        table.table td i {
+            font-size: 19px;
+        }
+
+        table.table .avatar {
+            border-radius: 50%;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        .pagination {
+            float: right;
+            margin: 0 0 5px;
+        }
+
+            .pagination li a {
+                border: none;
+                font-size: 13px;
+                min-width: 30px;
+                min-height: 30px;
+                color: #999;
+                margin: 0 2px;
+                line-height: 30px;
+                border-radius: 2px !important;
+                text-align: center;
+                padding: 0 6px;
+            }
+
+                .pagination li a:hover {
+                    color: #666;
+                }
+
+            .pagination li.active a, .pagination li.active a.page-link {
+                background: #03A9F4;
+            }
+
+                .pagination li.active a:hover {
+                    background: #0397d6;
+                }
+
+            .pagination li.disabled i {
+                color: #ccc;
+            }
+
+            .pagination li i {
+                font-size: 16px;
+                padding-top: 6px
+            }
+
+        .hint-text {
+            float: left;
+            margin-top: 10px;
+            font-size: 13px;
+        }
+        /* Custom checkbox */
+        .custom-checkbox {
+            position: relative;
+        }
+
+            .custom-checkbox input[type="checkbox"] {
+                opacity: 0;
+                position: absolute;
+                margin: 5px 0 0 3px;
+                z-index: 9;
+            }
+
+            .custom-checkbox label:before {
+                width: 18px;
+                height: 18px;
+            }
+
+            .custom-checkbox label:before {
+                content: '';
+                margin-right: 10px;
+                display: inline-block;
+                vertical-align: text-top;
+                background: white;
+                border: 1px solid #bbb;
+                border-radius: 2px;
+                box-sizing: border-box;
+                z-index: 2;
+            }
+
+            .custom-checkbox input[type="checkbox"]:checked + label:after {
+                content: '';
+                position: absolute;
+                left: 6px;
+                top: 3px;
+                width: 6px;
+                height: 11px;
+                border: solid #000;
+                border-width: 0 3px 3px 0;
+                transform: inherit;
+                z-index: 3;
+                transform: rotateZ(45deg);
+            }
+
+            .custom-checkbox input[type="checkbox"]:checked + label:before {
+                border-color: #03A9F4;
+                background: #03A9F4;
+            }
+
+            .custom-checkbox input[type="checkbox"]:checked + label:after {
+                border-color: #fff;
+            }
+
+            .custom-checkbox input[type="checkbox"]:disabled + label:before {
+                color: #b8b8b8;
+                cursor: auto;
+                box-shadow: none;
+                background: #ddd;
+            }
+        /* Modal styles */
+        .modal .modal-dialog {
+            max-width: 800px;
+        }
+
+        .modal .modal-header, .modal .modal-body, .modal .modal-footer {
+            padding: 10px;
+        }
+
+        .modal .modal-header, .modal .modal-body, .modal .modal-footer {
+            padding: 20px 30px;
+        }
+
+        .modal .modal-header {
+            background: #ecf0f1;
+        }
+
+        .modal .modal-content {
+            border-radius: 3px;
+            font-size: 14px;
+        }
+
+        .modal .modal-footer {
+            background: #ecf0f1;
+            border-radius: 0 0 3px 3px;
+        }
+
+        .modal .modal-title {
+            display: inline-block;
+        }
+
+        .modal .form-control {
+            border-radius: 2px;
+            box-shadow: none;
+            border-color: #dddddd;
+        }
+
+        .modal textarea.form-control {
+            resize: vertical;
+        }
+
+        .modal .btn {
+            border-radius: 2px;
+            min-width: 100px;
+        }
+
+        .modal form label {
+            font-weight: normal;
+        }
+
+    </style>
+    <script>
+        function _getData(_id) {
+            $.ajax({
+                url: '/NoteCard/GetCard', // URL ของ Web API Controller
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(_id),
+                success: function (response) {
+                    // ดำเนินการเมื่อ POST สำเร็จ
+                    //console.log("success : " + JSON.stringify(response));
+                    $('#Edit_cadrModal').modal('show');
+                    setModalText(response[0].card_id, response[0].title, response[0].detail);
+                },
+                error: function (error) {
+                    // ดำเนินการเมื่อเกิดข้อผิดพลาด
+                    console.log("error");
+                }
+            })
+        }
+
+        function setModalText(idText, titleText, detailText) {
+            // เลือกองค์ประกอบของ Modal โดย ID
+            var modal = document.getElementById('Edit_cadrModal');
+            // เลือกองค์ประกอบที่คุณต้องการตั้งค่า
+            var lableId = document.getElementById('Id_Card');
+            var titleInput = modal.querySelector('#Title_Card');
+            var detailTextArea = modal.querySelector('#Detail_Card');
+            // ตั้งค่าค่าข้อความ
+            //lableId. = lableId;
+            lableId.textContent = idText;
+            titleInput.value = titleText;
+            detailTextArea.value = detailText;
+
+            //Hide
+            document.getElementById("edit").style.display = "block";
+            //Open
+            document.getElementById("save").style.display = "none";
+            document.getElementById("cancle").style.display = "none";
+
+            document.getElementById("Title_Card").readOnly = true;
+            document.getElementById("Detail_Card").readOnly = true;
+        }
+
+        function _closeModal() {
+            $('#Add_cadrModal').modal('hide');
+            $('#Edit_cadrModal').modal('hide');
+            $('#completeModal').modal('hide');
+            $('#uncompleteModal').modal('hide');
+            $('#confirmModal').modal('hide');
+            reload();
+        }
+          
+
+        function _popup_add_Card() {
+            $('#Add_cadrModal').modal('show');
+            document.getElementById("Title_Card_Add").value = "";
+            document.getElementById("Detail_Card_Add").value = "";
+        }
+
+        function _popup_delet_Card(_id) {
+            $('#confirmModal').modal('show');
+            document.getElementById('Id_Card_Confirm').textContent = _id;
+        }
+
+        function _confirm_delete_Card() {
+            var _id = document.getElementById('Id_Card_Confirm').textContent;
+            console.log("_id : " + _id);
+            $('#confirmModal').modal('hide');
+            $.ajax({
+                url: '/NoteCard/deleteCard', // URL ของ Web API Controller
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(_id),
+                success: function (response) {
+                    // ดำเนินการเมื่อ POST สำเร็จ
+                    console.log("response : " + response);
+                    $('#completeModal').modal('show');
+                    //reload();
+                },
+                error: function (error) {
+                    // ดำเนินการเมื่อเกิดข้อผิดพลาด
+                    console.log("error : " + error);
+                    $('#uncompleteModal').modal('show');
+                    //reload();
+                }
+            })
+        }
+
+        function _addCard() {
+            var formData = {
+                Title: $("#Title_Card_Add").val(),
+                Detail: $("#Detail_Card_Add").val()
+            };
+            var json = JSON.stringify(formData);
+            console.log(json);
+            $.ajax({
+                url: '/NoteCard/addCard', // URL ของ Web API Controller
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(json),
+                success: function (response) {
+                    // ดำเนินการเมื่อ POST สำเร็จ
+                    console.log("success : " + JSON.stringify(response));
+                    $('#Add_cadrModal').modal('hide');
+                    $('#completeModal').modal('show');
+                    //setModalText(response[0].card_id, response[0].title, response[0].detail);
+                },
+                error: function (error) {
+                    // ดำเนินการเมื่อเกิดข้อผิดพลาด
+                    //_closeModal();
+                    console.log("error");
+                    $('#Add_cadrModal').modal('hide');
+                    $('#uncompleteModal').modal('show');
+                }
+            })
+        }
+
+        function reload() {
+            window.location.reload();
+        }
+
+        function _editCard() {
+            var formData = {
+                Card_Id: document.getElementById('Id_Card').textContent,
+                Title: $("#Title_Card").val(),
+                Detail: $("#Detail_Card").val()
+            };
+            var json = JSON.stringify(formData);
+            $.ajax({
+                url: '/NoteCard/editCard', // URL ของ Web API Controller
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(json),
+                success: function (response) {
+                    // ดำเนินการเมื่อ POST สำเร็จ
+                    console.log("success : " + response);
+                    //_closeModal();
+                    $('#Edit_cadrModal').modal('hide');
+                    $('#completeModal').modal('show');
+                    //window.location.reload();
+                    //$('#Edit_cadrModal').modal('show');
+                    //setModalText(response[0].title, response[0].detail);
+                },
+                error: function (error) {
+                    // ดำเนินการเมื่อเกิดข้อผิดพลาด
+                    //_closeModal();
+                    console.log("error");
+                    $('#Edit_cadrModal').modal('hide');
+                    $('#uncompleteModal').modal('show');
+                }
+            })
+        }
+
+        function _editmode() {
+            //Read-Write
+            document.getElementById("Title_Card").readOnly = false;
+            document.getElementById("Detail_Card").readOnly = false;
+            //Hide
+            document.getElementById("edit").style.display = "none";
+            //Open
+            document.getElementById("save").style.display = "block";
+            document.getElementById("cancle").style.display = "block";
+        }
+
+        function backmode() {
+            //ReadOnly
+            document.getElementById("Title_Card").readOnly = true;
+            document.getElementById("Detail_Card").readOnly = true;
+            //Hide
+            document.getElementById("edit").style.display = "block";
+            //Open
+            document.getElementById("save").style.display = "none";
+            document.getElementById("cancle").style.display = "none";
+        }
+
+    </script>
+</head>
+<body>
+    <div class="container-xl">
+        <div class="row" style="padding-bottom:15px">
+            <nav class="navbar navbar-expand-xl">
+                <img class="img" src="~/images/logo.png" alt="logo">
+                <div class="navbar-collapse collapse" style="font-size:15px;">
+                    <ul class="navbar-nav">
+                        <h2></h2>
+                        <a class="dropdown-item" style="color:darkgray" href="@Url.Action("Home", "Home")"><i class="fa-solid fa-gas-pump"></i> Home</a></li>
+                        <a class="dropdown-item" style="color:darkgray" href="@Url.Action("Index", "StationMaster")"><i class="fa-solid fa-gas-pump"></i> Station master</a></li>
+                        <a class="dropdown-item" style="color:darkgray" href="@Url.Action("Index", "NoteCard")"><i class="fa fa-file" aria-hidden="true"></i>  Note card</a></h2>
+                        <a class="dropdown-item" style="color:darkgray" href="@Url.Action("Index", "Document")"><i class="fa-solid fa-folder-open"></i> Document</a></li>
+                        <a class="dropdown-item" style="color:darkgray" href="@Url.Action("Index", "Application")"><i class="fa fa-list-ul" aria-hidden="true"></i> Application</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="table-responsive">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h2><b>Note Card</b></h2>
+                    </div>
+                    <div class="col-sm-6">
+                        <a onclick="_popup_add_Card()" class="btn btn-success" data-toggle="modal" style="color:white"><i class="material-icons">&#xE147;</i>Add New Card</a>
+                    </div>
+                </div>
+            </div>
+            @for (int i = 0; i < Model.Count() + 1; i += 2)
+            {
+                try
+                {
+                    <div class="row" style="padding-bottom:5px">
+                        @if (@Model[i].title != null)
+                        {
+                            <div class="col-sm-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title" style="font-family:BrowalliaUPC"><b>@Model[i].title</b></h4>
+                                        <pls class="card-text">With supporting text below as a natural lead-in to additional content.</pls>
+                                        <div class="row" style="display:flex">
+                                            <div class="col-12" style="display:flex;justify-content:flex-start">
+                                                <div>
+                                                    <a onclick="_getData(@Model[i].card_id)" class="btn btn-primary" data-toggle="modal" style="color:white;align-content:center;height:35px">
+                                                        <div style="display:flex;">
+                                                            <div>
+                                                                <i class="material-icons" style="padding-right:5px;font-size:20px">&#xE417;</i>
+                                                            </div>
+                                                            <div onclick="">
+                                                                Details
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div style="padding-left:3px">
+                                                    <a onclick="_popup_delet_Card(@Model[i].card_id)" class="btn btn-danger" data-toggle="modal" style="color:white;align-content:center;height:35px">
+                                                        <div style="display:flex;">
+                                                            <div>
+                                                                <i class="material-icons" style="padding-right:5px;font-size:20px">&#xE872;</i>
+                                                            </div>
+                                                            <div>
+                                                                Delete
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        @if (@Model[i + 1].title != null)
+                        {
+                            <div class="col-sm-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title" style="font-family:BrowalliaUPC"><b>@Model[i+1].title</b></h4>
+                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                        <div class="row" style="display:flex">
+                                            <div class="col-12" style="display:flex;justify-content:flex-start">
+                                                <div>
+                                                    <a onclick="_getData(@Model[i + 1].card_id)" class="btn btn-primary" data-toggle="modal" style="color:white;align-content:center;height:35px">
+                                                        <div style="display:flex;">
+                                                            <div>
+                                                                <i class="material-icons" style="padding-right:5px;font-size:20px">&#xE417;</i>
+                                                            </div>
+                                                            <div>
+                                                                Details
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div style="padding-left:3px">
+                                                    <a onclick="_popup_delet_Card(@Model[i + 1].card_id)" class="btn btn-danger" data-toggle="modal" style="color:white;align-content:center;height:35px">
+                                                        <div style="display:flex;">
+                                                            <div>
+                                                                <i class="material-icons" style="padding-right:5px;font-size:20px">&#xE872;</i>
+                                                            </div>
+                                                            <div>
+                                                                Delete
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                }
+                catch
+                {
+
+                }
+            }
+        </div>
+    </div>
+
+    <!-- Add Modal HTML -->
+    <div id="Add_cadrModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Detail</h4><label id="Id_Card" style="display:none"></label>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" onclick="_closeModal()" style="background:red;border:solid;color:white;font-size:small">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <div style="display:flex;" class="row">
+                            <div class="col-xl-6">
+                                <label>Title Card</label>
+                            </div>
+                        </div>
+                        <input type="text" class="form-control" id="Title_Card_Add" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Detail Card</label>
+                        <textarea name="textarea" class="form-control" required id="Detail_Card_Add" style="height:300px"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" onclick="_addCard()">Save</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="_closeModal()">Cancle</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Edit Modal HTML -->
+    <div id="Edit_cadrModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Detail</h4><label id="Id_Card" style="display:none"></label>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" onclick="_closeModal()" style="background:red;border:solid;color:white;font-size:small">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <div style="display:flex;" class="row">
+                            <div class="col-xl-6">
+                                <label>Title Card</label>
+                            </div>
+                            <div class="col-xl-6" style="display:flex;justify-content: right">
+                                <i class="fas fa-pen text-primary action-button" title="Edit" id="edit" onclick="_editmode()"></i>
+                                <i class="fas fa-save text-primary mr-3 action-button" title="Save" id="save" onclick="_editCard()" style="display:none"></i>
+                                <i class="fas fa-times text-danger action-button" title="Cancel" id="cancle" onclick="backmode()" style="display:none"></i>
+                            </div>
+                        </div>
+                        <input type="text" class="form-control" id="Title_Card" @*required*@>
+                    </div>
+                    <div class="form-group">
+                        <label>Detail Card</label>
+                        <textarea name="textarea" class="form-control" @*required*@ id="Detail_Card" style="height:300px"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" onclick="_editCard()">Save</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="_closeModal()">Cancle</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Complete Modal HTML -->
+    <div class="modal fade" id="completeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document" style="width:500px">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Message Box</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" onclick="_closeModal()" style="background:red;border:solid;color:white;font-size:small">&times;</button>
+                </div>
+                <div class="modal-body">
+                    Your data save complet.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" onclick="_closeModal()">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Uncomplete Modal HTML -->
+    <div class="modal fade" id="uncompleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document" style="width:500px">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Message Box</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" onclick="_closeModal()" style="background:red;border:solid;color:white;font-size:small">&times;</button>
+                </div>
+                <div class="modal-body">
+                    Your data save Uncomplete.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" onclick="_closeModal()">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confirm Modal HTML -->
+    <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document" style="width:500px">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Confirm Box</h5><label id="Id_Card_Confirm" style="display:none"></label>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" onclick="_closeModal()" style="background:red;border:solid;color:white;font-size:small">&times;</button>
+                </div>
+                <div class="modal-body">
+                    Do you want to delete this card?.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" onclick="_confirm_delete_Card()">OK</button>
+                    <button type="button" class="btn btn-danger" onclick="_closeModal()">Cancle</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

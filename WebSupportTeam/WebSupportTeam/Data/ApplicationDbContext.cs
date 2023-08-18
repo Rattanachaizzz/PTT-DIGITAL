@@ -15,9 +15,13 @@ namespace WebSupportTeam.Data
             modelBuilder.HasDefaultSchema("support");
         }
 
-        public DbSet<File_path> file_paths { get; set; }
-        public DbSet<Images> images { get; set; }
-        public DbSet<Station_master> Station_masters { get; set; }
-        public DbSet<Users_manager> Users_managers { get; set; }
+        public DbSet<station_masters> station_master { get; set; }
+        public DbSet<data_configs> data_config { get; set; }
+        public DbSet<cards> card { get; set; }
+
+
+        /*        public DbSet<file_paths> file_path { get; set; }
+                public DbSet<images> image { get; set; }
+                public DbSet<user_managers> user_manager { get; set; }*/
     }
 }

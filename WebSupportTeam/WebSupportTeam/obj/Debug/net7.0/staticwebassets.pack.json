@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "D:\\githup\\WebSupportTeam\\WebSupportTeam\\wwwroot\\documents\\Lavender_QC Manual - Copy.pdf",
+      "PackagePath": "staticwebassets\\documents\\Lavender_QC Manual - Copy.pdf"
+    },
+    {
+      "Id": "D:\\githup\\WebSupportTeam\\WebSupportTeam\\wwwroot\\documents\\Lavender_QC Manual.pdf",
+      "PackagePath": "staticwebassets\\documents\\Lavender_QC Manual.pdf"
+    },
+    {
       "Id": "D:\\githup\\WebSupportTeam\\WebSupportTeam\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
@@ -189,12 +197,52 @@
       "PackagePath": "staticwebassets\\font-awesome\\webfonts\\fa-v4compatibility.woff2"
     },
     {
+      "Id": "D:\\githup\\WebSupportTeam\\WebSupportTeam\\wwwroot\\images\\0ee54c26-9d89-42e4-82d9-b90afeee63cb_upload.png",
+      "PackagePath": "staticwebassets\\images\\0ee54c26-9d89-42e4-82d9-b90afeee63cb_upload.png"
+    },
+    {
+      "Id": "D:\\githup\\WebSupportTeam\\WebSupportTeam\\wwwroot\\images\\3c91ad55-60fb-4280-b813-0a7109617172_upload.png",
+      "PackagePath": "staticwebassets\\images\\3c91ad55-60fb-4280-b813-0a7109617172_upload.png"
+    },
+    {
+      "Id": "D:\\githup\\WebSupportTeam\\WebSupportTeam\\wwwroot\\images\\984f174f-4355-472c-a6a4-cdc9d778a053_table.jpg",
+      "PackagePath": "staticwebassets\\images\\984f174f-4355-472c-a6a4-cdc9d778a053_table.jpg"
+    },
+    {
+      "Id": "D:\\githup\\WebSupportTeam\\WebSupportTeam\\wwwroot\\images\\ad264197-fcda-438d-9aab-c21aa0c806b2_upload.png",
+      "PackagePath": "staticwebassets\\images\\ad264197-fcda-438d-9aab-c21aa0c806b2_upload.png"
+    },
+    {
+      "Id": "D:\\githup\\WebSupportTeam\\WebSupportTeam\\wwwroot\\images\\c2ee65a7-57f5-4110-b78c-002f184cc2de_table.jpg",
+      "PackagePath": "staticwebassets\\images\\c2ee65a7-57f5-4110-b78c-002f184cc2de_table.jpg"
+    },
+    {
+      "Id": "D:\\githup\\WebSupportTeam\\WebSupportTeam\\wwwroot\\images\\d6a71b83-e442-4de2-8861-9b4aded6b256_table.jpg",
+      "PackagePath": "staticwebassets\\images\\d6a71b83-e442-4de2-8861-9b4aded6b256_table.jpg"
+    },
+    {
+      "Id": "D:\\githup\\WebSupportTeam\\WebSupportTeam\\wwwroot\\images\\da28e2b3-5864-49ea-a1aa-e2f1688f9296_upload.png",
+      "PackagePath": "staticwebassets\\images\\da28e2b3-5864-49ea-a1aa-e2f1688f9296_upload.png"
+    },
+    {
+      "Id": "D:\\githup\\WebSupportTeam\\WebSupportTeam\\wwwroot\\images\\dd0be3c9-bbbf-420a-b503-b34fd7463aac_table.jpg",
+      "PackagePath": "staticwebassets\\images\\dd0be3c9-bbbf-420a-b503-b34fd7463aac_table.jpg"
+    },
+    {
       "Id": "D:\\githup\\WebSupportTeam\\WebSupportTeam\\wwwroot\\images\\logo.png",
       "PackagePath": "staticwebassets\\images\\logo.png"
     },
     {
-      "Id": "D:\\githup\\WebSupportTeam\\WebSupportTeam\\wwwroot\\images\\photo_support.png",
-      "PackagePath": "staticwebassets\\images\\photo_support.png"
+      "Id": "D:\\githup\\WebSupportTeam\\WebSupportTeam\\wwwroot\\images\\photoSupport.png",
+      "PackagePath": "staticwebassets\\images\\photoSupport.png"
+    },
+    {
+      "Id": "D:\\githup\\WebSupportTeam\\WebSupportTeam\\wwwroot\\images\\table.jpg",
+      "PackagePath": "staticwebassets\\images\\table.jpg"
+    },
+    {
+      "Id": "D:\\githup\\WebSupportTeam\\WebSupportTeam\\wwwroot\\images\\upload.png",
+      "PackagePath": "staticwebassets\\images\\upload.png"
     },
     {
       "Id": "D:\\githup\\WebSupportTeam\\WebSupportTeam\\wwwroot\\js\\site.js",

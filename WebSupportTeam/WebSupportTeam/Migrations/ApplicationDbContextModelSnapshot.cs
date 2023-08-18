@@ -23,7 +23,7 @@ namespace WebSupportTeam.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("WebSupportTeam.Models.File_path", b =>
+            modelBuilder.Entity("WebSupportTeam.Models.file_paths", b =>
                 {
                     b.Property<int>("file_path_id")
                         .ValueGeneratedOnAdd()
@@ -32,19 +32,17 @@ namespace WebSupportTeam.Migrations
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("file_path_id"));
 
                     b.Property<string>("file_name")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("path_file")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("file_path_id");
 
-                    b.ToTable("file_paths", "support");
+                    b.ToTable("file_path", "support");
                 });
 
-            modelBuilder.Entity("WebSupportTeam.Models.Images", b =>
+            modelBuilder.Entity("WebSupportTeam.Models.images", b =>
                 {
                     b.Property<int?>("file_path_id")
                         .ValueGeneratedOnAdd()
@@ -53,19 +51,17 @@ namespace WebSupportTeam.Migrations
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int?>("file_path_id"));
 
                     b.Property<string>("file_name")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("path_file")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("file_path_id");
 
-                    b.ToTable("images", "support");
+                    b.ToTable("image", "support");
                 });
 
-            modelBuilder.Entity("WebSupportTeam.Models.Station_master", b =>
+            modelBuilder.Entity("WebSupportTeam.Models.station_masters", b =>
                 {
                     b.Property<int>("id_station")
                         .ValueGeneratedOnAdd()
@@ -74,50 +70,41 @@ namespace WebSupportTeam.Migrations
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("id_station"));
 
                     b.Property<string>("atg_alarm")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("brand_station")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("bu_station")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateTime>("create_date")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("ip_bo")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("ip_sim")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("name_station")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("pbl_station")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("pump_master")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("service_version")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("id_station");
 
-                    b.ToTable("Station_masters", "support");
+                    b.ToTable("station_master", "support");
                 });
 
-            modelBuilder.Entity("WebSupportTeam.Models.Users_manager", b =>
+            modelBuilder.Entity("WebSupportTeam.Models.user_managers", b =>
                 {
                     b.Property<int>("user_id")
                         .ValueGeneratedOnAdd()
@@ -126,7 +113,6 @@ namespace WebSupportTeam.Migrations
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("user_id"));
 
                     b.Property<string>("department")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<bool>("enable")
@@ -136,20 +122,17 @@ namespace WebSupportTeam.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("password")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("role")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("user_name")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("user_id");
 
-                    b.ToTable("Users_managers", "support");
+                    b.ToTable("user_manager", "support");
                 });
 #pragma warning restore 612, 618
         }
